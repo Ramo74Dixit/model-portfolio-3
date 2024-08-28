@@ -1,18 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@400;700&display=swap');
 
 body {
+  font-family: 'Klee One', cursive; /* Apply the font globally */
   min-height: 100vh;
   margin: 0;
+  box-sizing: border-box;
 }
+
+/* Additional media query for small screens */
 @media (max-width: 768px) {
   body {
     min-height: 100vh;
     margin: 0;
     box-sizing: border-box;
-
-    /* You can add any additional styles here for small screens */
   }
 }
+
 .App {
   text-align: center;
 }
@@ -49,5 +52,34 @@ body {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+
+@keyframes diagonalShutter {
+  0% {
+    clip-path: polygon(0 0, 0 0, 100% 100%, 100% 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1.0); /* Adjust scale for desired zoom level */
+  }
+}
+
+.shutter-bg {
+  animation: diagonalShutter 2s ease-in-out forwards, zoomIn 2s ease-in-out forwards;
+}
+
+@media (max-width: 640px) {
+  .shutter-bg {
+    animation: diagonalShutter 2s ease-in-out forwards, zoomIn 2s ease-in-out forwards;
   }
 }

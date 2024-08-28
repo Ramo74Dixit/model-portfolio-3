@@ -1,10 +1,11 @@
 import React from 'react'
+import '../App.css';
 
 const Home = () => {
   return (
     <div className='flex flex-col md:flex-row'>
       {/* Image Section */}
-      <div className='h-[75vh] md:h-[82.25vh] w-full md:w-[40vw] ml-0 flex-shrink-0'>
+      <div className='h-[75vh] md:h-[82.25vh] w-full md:w-[40vw] ml-0 flex-shrink-0 shutter-bg'>
         <img
           src='./HomeImage.png'
           alt='Home'
@@ -14,7 +15,7 @@ const Home = () => {
 
       {/* Text Section */}
       <div className='h-[9.5vh] md:h-[70vh] flex flex-col justify-center items-center w-full p-4'>
-        <h1 className='text-3xl font-[Klee One] text-center'>
+        <h1 className='text-5xl font-[Klee One] text-center'>
           MAGGY MOON
         </h1>
       </div>
